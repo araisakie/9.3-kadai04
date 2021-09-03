@@ -39,7 +39,8 @@ console.log(numbers.slice(3, 6));
  * 逆順でリスト表示
  */
 
-console.log(numbers.slice().reverse());
+// console.log(numbers.slice().reverse());
+console.log([...numbers].reverse());
 
 /**
  * すべてに2をかけてリスト表示
@@ -62,18 +63,14 @@ console.log(numbers.slice(0, -1));
 /**
  * すべてを足した値を表示
  */
-let total = numbers.reduce(function (sum, element) {
-  return sum + element;
-});
+let total = numbers.reduce((sum, element) => sum + element);
 
 console.log(total);
 
 /**
  * 最初に出てくる5以上の値を表示
  */
-const numbers4 = numbers.find(function (numbers) {
-  return numbers > 5;
-});
+const numbers4 = numbers.find((numbers) => numbers > 5);
 
 console.log(numbers4);
 
@@ -94,15 +91,15 @@ console.log(Number2);
  */
 const numbers9 = [1, -22, 30, -4, 5, 6, 29, 12, 3];
 
-numbers9.sort((a, b) => (a < b ? 1 : -1));
+const num = [...numbers9].sort((a, b) => (a < b ? 1 : -1));
 
-console.log(numbers9);
+console.log(num);
 
 /**
  * 小さい順にリスト表示
  */
 const numbers10 = [1, -22, 30, -4, 5, 6, 29, 12, 3];
 
-numbers10.sort((a, b) => (a < b ? -1 : 1));
+const num2 = [...numbers10].sort((a, b) => (a < b ? -1 : 1));
 
-console.log(numbers10);
+console.log(num2);
